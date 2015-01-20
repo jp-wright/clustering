@@ -1,4 +1,4 @@
-# High-level Plotting and Data Analysis
+# Advanced Customization and Configuration
 
 
 ## Dependencies
