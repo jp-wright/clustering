@@ -4,7 +4,6 @@ NAME=custom-and-config
 NOTEBOOK=notebooks/mmpl-$(NAME).ipynb
 
 -include include/common.mk
--include include/graphviz.mk
 
 # The following target is intended for use by project-creators only. When
 # creating a new notebook project, add a copy of this Makefile and run this
@@ -16,7 +15,7 @@ setup-submodule:
 
 # The 'setup' target needs to be run before the 'project-deps' target,
 # so that the includes are present (done by 'make project-setup').
-deps: pygraphviz project-deps
+deps: project-deps
 
 setup:
 	@git submodule init
