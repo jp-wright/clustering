@@ -15,7 +15,14 @@ setup-submodule:
 
 # The 'setup' target needs to be run before the 'project-deps' target,
 # so that the includes are present (done by 'make project-setup').
-deps: project-deps
+#
+# Note that this repo overrides the standard project deps to make
+# installation in Docker easier.
+deps:
+	. $(VENV)/bin/activate && \
+	pip3.4 install -r requirements-part1.txt
+	. $(VENV)/bin/activate && \
+	pip3.4 install -r requirements-part2.txt
 
 setup:
 	@git submodule init
