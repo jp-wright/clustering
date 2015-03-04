@@ -32,7 +32,6 @@ setup:
 docker-setup:
 	@git submodule init
 	@git submodule update
-	pip3.4 install -r requirements-part1.txt
 	pip3.4 install -r requirements-part2.txt
 
 .DEFAULT_GOAL :=
