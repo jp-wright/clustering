@@ -37,6 +37,10 @@ docker-setup:
 	pip3 install -r requirements-part2.txt
 	pip3 install -r requirements-part3.txt
 
+clean-docker:
+	-docker rm $(shell docker ps -a -q)
+	docker rmi $(shell docker images -q --filter 'dangling=true')
+
 .DEFAULT_GOAL :=
 default: setup
 	make run
