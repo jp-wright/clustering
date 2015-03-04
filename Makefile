@@ -35,6 +35,7 @@ docker-setup:
 	@git submodule init
 	@git submodule update
 	pip3 install -r requirements-part2.txt
+	pip3 install -r requirements-part3.txt
 
 clean-docker:
 	-docker rm $(shell docker ps -a -q)
