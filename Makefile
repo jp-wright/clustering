@@ -23,6 +23,8 @@ deps:
 	pip3.4 install -r requirements-part1.txt
 	. $(VENV)/bin/activate && \
 	pip3.4 install -r requirements-part2.txt
+	. $(VENV)/bin/activate && \
+	pip3.4 install -r requirements-part3.txt
 
 setup:
 	@git submodule init
@@ -32,7 +34,8 @@ setup:
 docker-setup:
 	@git submodule init
 	@git submodule update
-	pip3.4 install -r requirements-part2.txt
+	pip3 install -r requirements-part2.txt
+	pip3 install -r requirements-part3.txt
 
 .DEFAULT_GOAL :=
 default: setup
