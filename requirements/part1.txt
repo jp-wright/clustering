@@ -1,0 +1,12 @@
+setuptools
+flake8
+six
+python-dateutil
+pyparsing
+pytz
+numpy
+matplotlib
+scipy
+pandas
+ipython[notebook]
+seaborn

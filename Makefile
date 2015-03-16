@@ -20,11 +20,11 @@ setup-submodule:
 # installation in Docker easier.
 deps:
 	. $(VENV)/bin/activate && \
-	pip3.4 install -r requirements-part1.txt
+	pip3.4 install -r requirements/part1.txt
 	. $(VENV)/bin/activate && \
-	pip3.4 install -r requirements-part2.txt
+	pip3.4 install -r requirements/part2.txt
 	. $(VENV)/bin/activate && \
-	pip3.4 install -r requirements-part3.txt
+	pip3.4 install -r requirements/part3.txt
 
 setup:
 	@git submodule init
@@ -34,8 +34,8 @@ setup:
 docker-setup:
 	@git submodule init
 	@git submodule update
-	pip3 install -r requirements-part2.txt
-	pip3 install -r requirements-part3.txt
+	pip3 install -r requirements/part2.txt
+	pip3 install -r requirements/part3.txt
 
 clean-docker:
 	-docker rm $(shell docker ps -a -q)
