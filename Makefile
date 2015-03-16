@@ -1,6 +1,6 @@
 INCLUDE_REPO=https://github.com/masteringmatplotlib/cloud-deploy.git
 INCLUDE_DIR=include
-NAME=cloud-deploy
+NAME=big-data
 NOTEBOOK=notebooks/mmpl-$(NAME).ipynb
 
 -include include/common.mk
