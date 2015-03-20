@@ -1,4 +1,6 @@
 typecheck-decorator == 0.3b
+numexpr
+cython
 Image
 networkx
 FileChunkIO
