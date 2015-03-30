@@ -26,10 +26,31 @@ deps:
 	. $(VENV)/bin/activate && \
 	pip3.4 install -r requirements/part3.txt
 
-setup:
+setup: disco-python disco-cli
 	@git submodule init
 	@git submodule update
 	@make project-setup
+
+disco-python: disco
+	. $(VENV)/bin/activate && \
+	cd disco && \
+	cd lib && python3 setup.py install
+
+disco-cli: disco
+	. $(VENV)/bin/activate && \
+	cd disco/bin && \
+	cp * $(VIRTUAL_ENV)/bin
+
+disco-erlang:
+	. $(VENV)/bin/activate && \
+	cd disco && \
+	make
+
+disco:
+	git clone https://github.com/discoproject/disco && \
+	cd disco && \
+	git checkout tags/0.5.4
+
 
 docker-setup:
 	@git submodule init
@@ -40,6 +61,16 @@ docker-setup:
 clean-docker:
 	-docker rm $(shell docker ps -a -q)
 	docker rmi $(shell docker images -q --filter 'dangling=true')
+
+docker-images:
+	docker build -t masteringmatplotlib/erlang ./docker/erlang && \
+	docker build -t masteringmatplotlib/disco ./docker/disco
+
+run-manager:
+	docker run -i -p 8989:8989 -t masteringmatplotlib/disco
+
+run-worker:
+	docker run -i -p 8989:8989 -t masteringmatplotlib/disco
 
 .DEFAULT_GOAL :=
 default: setup
