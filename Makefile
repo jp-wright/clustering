@@ -26,7 +26,7 @@ deps:
 	. $(VENV)/bin/activate && \
 	pip3.4 install -r requirements/part3.txt
 
-setup: disco-python disco-cli
+setup:
 	@git submodule init
 	@git submodule update
 	@make project-setup
