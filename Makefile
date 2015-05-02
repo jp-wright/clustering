@@ -1,6 +1,6 @@
 INCLUDE_REPO=https://github.com/masteringmatplotlib/cloud-deploy.git
 INCLUDE_DIR=include
-NAME=big-data
+NAME=clustering
 NOTEBOOK=notebooks/mmpl-$(NAME).ipynb
 
 -include include/common.mk
@@ -19,6 +19,8 @@ setup-submodule:
 # Note that this repo overrides the standard project deps to make
 # installation in Docker easier.
 deps:
+	. $(VENV)/bin/activate && \
+	pip3.4 install -U pip pyzmq
 	. $(VENV)/bin/activate && \
 	pip3.4 install -r requirements/part1.txt
 	. $(VENV)/bin/activate && \

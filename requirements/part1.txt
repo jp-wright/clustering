@@ -11,3 +11,5 @@ scipy
 pandas
 ipython[notebook]
 seaborn
+scikit-learn
+astropy

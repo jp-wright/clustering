@@ -6,5 +6,7 @@ h5py
 Image
 networkx
 FileChunkIO
+astroml
 boto
 awscli
+-e git://github.com/oubiwann/StarCluster.git@develop#egg=StarCluster
