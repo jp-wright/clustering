@@ -18,6 +18,5 @@ def main(tasks):
     distributor.distribute(tasks)
 
 if __name__ == "__main__":
-    count = range(democfg.task_count)
-    tasks = [1e8 / democfg.task_count for _ in count]
+    tasks = [1e8 / democfg.task_count] * democfg.task_count
     main(tasks)

@@ -7,7 +7,7 @@ def distribute(tasks):
     # Socket to send messages on
     sender = context.socket(zmq.PUSH)
     sender.bind(democfg.routing_table["receiver"])
-    # Socket with direct access to the sink used to syncronize start of batch
+    # Socket with direct access to the sink used to synchronize start of batch
     syncher = context.socket(zmq.PUSH)
     syncher.connect(democfg.routing_table["sender"])
     # Give 0MQ time to start up
