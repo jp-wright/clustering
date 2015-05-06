@@ -1,4 +1,4 @@
-INCLUDE_REPO=https://github.com/masteringmatplotlib/cloud-deploy.git
+INCLUDE_REPO=https://github.com/masteringmatplotlib/includes.git
 INCLUDE_DIR=include
 NAME=clustering
 NOTEBOOK=notebooks/mmpl-$(NAME).ipynb
