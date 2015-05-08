@@ -12,6 +12,13 @@ The following are required for these examples:
 
 ## Instructions
 
+If you are running Mac OS X, you will need to export a C compilter environment
+variable before running the ``make`` target below:
+
+```bash
+    $ export CC=clang
+```
+
 The following will set up a local matplotlib environment for you, and start an
 IPython Notebook server:
 
