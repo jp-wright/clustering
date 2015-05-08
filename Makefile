@@ -18,7 +18,7 @@ setup-submodule:
 #
 # Note that this repo overrides the standard project deps to make
 # installation in Docker easier.
-deps:
+deps: base-deps
 	. $(VENV)/bin/activate && \
 	pip3.4 install -U pip pyzmq
 	. $(VENV)/bin/activate && \
