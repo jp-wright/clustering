@@ -2,7 +2,6 @@ typecheck-decorator == 0.3b
 numexpr
 cython
 cytoolz
-Image
 astroml
 boto
 awscli
